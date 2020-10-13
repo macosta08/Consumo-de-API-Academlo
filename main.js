@@ -1,15 +1,15 @@
 
 function getQuestions() {
     const questionsQuantity = document.getElementById('questions-number').value
+    const questionsCategory = document.getElementById('questions-category').value
     const questionsType = document.getElementById('questions-type').value
     const questionsDifficulty = document.getElementById('questions-difficulty').value
     
-    fetch(`https://opentdb.com/api.php?amount=${questionsQuantity}&category=&difficulty=${questionsDifficulty}&type=${questionsType}`)
+    fetch(`https://opentdb.com/api.php?amount=${questionsQuantity}&category=${questionsCategory}&difficulty=${questionsDifficulty}&type=${questionsType}`)
         .then(response => response.json())
         .then(data => printCards(data.results))
 }
 
-// console.log(datos);
 
 function printCards(questions) {
     const container = document.getElementById('container-cards');
@@ -22,7 +22,7 @@ function printCards(questions) {
 }
 
 function returnCardHTML(q) {
-    const card = `<div class="card">
+    const card = `<div class=" card-propio card">
                     <div class="card-body">
                     <h5 class="card-title">${q.category} - ${q.difficulty}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">${q.question}</h6>
@@ -55,3 +55,4 @@ function returnAnswersHTML(correct, incorrects) {
 
     return correctHTML + incorrectHTML;
 }
+

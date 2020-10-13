@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivia APP</title>
+    <title>Fetching data from the API Open Trivia </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    
+    <h1>Fetching data from the API Open Trivia </h1>
     <div class="container mt-5">
         <div>
             <div class="form-group">
@@ -20,6 +21,14 @@
                 </select>
               </div>
         </div>
+        <div>
+          <div class="form-group">
+              <label for="questions-category"></label>
+              <select onchange="getQuestions()" class="form-control" id="questions-category">
+                <option value="">Any Category</option>
+              </select>
+            </div>
+      </div>
         <div>
             <div class="form-group">
                 <label for="questions-difficulty"></label>
@@ -47,5 +56,6 @@
         </div>
     </div>
     <script src="./main.js"></script>
+    <script src="./categories.js"></script>
 </body>
 </html>
