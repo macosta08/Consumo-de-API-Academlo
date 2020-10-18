@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fetching data from the API Open Trivia </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <h1>Fetching data from the API Open Trivia </h1>
     <div class="container mt-5">
         <div>
+
             <div class="form-group">
+              <h6>Number of Questions</h6>
                 <label for="questions-number"></label>
                 <select onchange="getQuestions()" class="form-control" id="questions-number">
                   <option value="5">5</option>
@@ -23,6 +26,7 @@
         </div>
         <div>
           <div class="form-group">
+            <h6>Select Category</h6>
               <label for="questions-category"></label>
               <select onchange="getQuestions()" class="form-control" id="questions-category">
                 <option value="">Any Category</option>
@@ -31,6 +35,7 @@
       </div>
         <div>
             <div class="form-group">
+              <h6>Select Difficulty</h6>
                 <label for="questions-difficulty"></label>
                 <select onchange="getQuestions()" class="form-control" id="questions-difficulty">
                   <option value="">Any Difficulty</option>
@@ -42,6 +47,7 @@
         </div>
         <div>
             <div class="form-group">
+              <h6>Select Type</h6>
                 <label for="questions-type"></label>
                 <select onchange="getQuestions()" class="form-control" id="questions-type">
                   <option value="">Any Type</option>
@@ -50,10 +56,15 @@
                 </select>
               </div>
         </div>
-        <!-- Aquí van las tarjetas -->
+        <form action="" onsubmit="event.preventDefault(), checkAnswers()" >        
         <div id="container-cards">
-
+          <!-- Aquí van las tarjetas de preguntas -->
+        </div> 
+               
+        <div class="container mt-5" id="container-button-result"> 
+          <!-- Aquí va el boton -->
         </div>
+      </form>
     </div>
     <script src="./main.js"></script>
     <script src="./categories.js"></script>
