@@ -6,7 +6,7 @@
     <title>Fetching data from the API Open Trivia </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./CSS/styles.css">
 </head>
 <body>
     <h1>Fetching data from the API Open Trivia </h1>
@@ -16,7 +16,7 @@
             <div class="form-group">
               <h6>Number of Questions</h6>
                 <label for="questions-number"></label>
-                <select onchange="getQuestions()" class="form-control" id="questions-number">
+                <select onchange="questions()" class="form-control" id="questions-number">
                   <option value="5">5</option>
                   <option value="10">10</option>
                   <option value="15">15</option>
@@ -28,7 +28,7 @@
           <div class="form-group">
             <h6>Select Category</h6>
               <label for="questions-category"></label>
-              <select onchange="getQuestions()" class="form-control" id="questions-category">
+              <select onchange="questions()" class="form-control" id="questions-category">
                 <option value="">Any Category</option>
               </select>
             </div>
@@ -37,7 +37,7 @@
             <div class="form-group">
               <h6>Select Difficulty</h6>
                 <label for="questions-difficulty"></label>
-                <select onchange="getQuestions()" class="form-control" id="questions-difficulty">
+                <select onchange="questions()" class="form-control" id="questions-difficulty">
                   <option value="">Any Difficulty</option>
                   <option value="easy">Easy</option>
                   <option value="medium">Medium</option>
@@ -49,7 +49,7 @@
             <div class="form-group">
               <h6>Select Type</h6>
                 <label for="questions-type"></label>
-                <select onchange="getQuestions()" class="form-control" id="questions-type">
+                <select onchange="questions()" class="form-control" id="questions-type">
                   <option value="">Any Type</option>
                   <option value="multiple">Multiple Choice</option>
                   <option value="boolean">True / False</option>
@@ -66,7 +66,7 @@
         </div>
       </form>
     </div>
-    <script src="./main.js"></script>
-    <script src="./categories.js"></script>
+    <script type="module" src="./JS/main.js"></script>
+    <script src="./JS/categories.js"></script>
 </body>
 </html>

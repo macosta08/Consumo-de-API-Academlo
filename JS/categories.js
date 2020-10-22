@@ -10,7 +10,6 @@ function getCategories() {
 
 }
 
-
 function categoryOptions(categories) {
     /*
     Función que es invocada desde el fetch del API category. Recibe un arreglo de objetos con las categorias 
